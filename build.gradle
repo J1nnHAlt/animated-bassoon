@@ -47,22 +47,3 @@ task createZip(type: Zip) {
 	archiveFileName = 'project-name.zip'
 	destinationDirectory = file('build/distributions')
 }
-
-task pushToGitHub(type: Exec) {
-	workingDir 'build'
-	commandLine 'git', 'init'
-	exec()
-
-	commandLine 'git', 'add', '.'
-	exec()
-
-	commandLine 'git', 'commit', '-m', 'Initial commit'
-	exec()
-
-	commandLine 'git', 'remote', 'add', 'origin', 'https://github.com/J1nnHAlt/85.git'
-	exec()
-
-	commandLine 'git', 'push', '-u', 'origin', 'master'
-	exec()
-}
-
