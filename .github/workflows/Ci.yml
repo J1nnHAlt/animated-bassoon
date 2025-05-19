@@ -24,7 +24,7 @@ jobs:
         run: gradle BuildJar
 
       - name: upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: builddddd
           path: build/libs/**
