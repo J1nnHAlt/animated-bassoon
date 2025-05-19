@@ -12,19 +12,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout code
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: build
-      - run: gradle BuildJar
+        run: gradle BuildJar
 
       - name: test
-      - run: gradle RunTest
+        run: gradle RunTest
 
       - name: copy resource
-      - run: gradle copyResources
+        run: gradle copyResources
 
       - name: create zip
-      - run: gradle createZip
+        run: gradle createZip
 
       - name: run
-      - run: java -jar build/libs/my-application-1.0-SNAPSHOT.jar
+        run: java -jar build/libs/my-application-1.0-SNAPSHOT.jar
