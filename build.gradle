@@ -43,7 +43,7 @@ task copyResources(type: Copy) {
 }
 
 task createZip(type: Zip) {
-	from 'src'
+	from 'build'
 	archiveFileName = 'project-name.zip'
 	destinationDirectory = file('build/distributions')
 }
